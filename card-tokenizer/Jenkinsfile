@@ -16,7 +16,10 @@ pipeline {
 
         stage ('Build') {
             steps {
-                sh 'mvn --projects card-tokenizer --also-make clean install'
+                script {
+                def buildGoal = "${BRANCH_NAME}" == 'master' ? 'clean deploy' : 'clean install'
+                sh "mvn --projects card-tokenizer --also-make ${buildGoal}"
+                }
             }
         }
     }
