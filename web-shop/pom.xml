@@ -109,7 +109,7 @@
                                     <arguments>
                                         <argument>push</argument>
                                         <argument>
-                                            nenadkocev/tokenizer:${project.version}
+                                            nenadkocev/web-shop:${project.version}
                                         </argument>
                                     </arguments>
                                 </configuration>
