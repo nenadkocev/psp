@@ -16,7 +16,7 @@ pipeline {
 
         stage ('Build') {
             steps {
-                sh 'mvn -Dmaven.test.failure.ignore=true -Pdocker-image install'
+                sh 'mvn --projects card-tokenizer --also-make install'
             }
         }
     }
