@@ -16,7 +16,7 @@ pipeline {
 
         stage ('Build') {
             steps {
-                sh 'mvn --projects web-shop --also-make install'
+                sh 'mvn --projects web-shop --also-make clean install'
             }
         }
     }

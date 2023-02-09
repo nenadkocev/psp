@@ -16,7 +16,7 @@ pipeline {
 
         stage ('Build') {
             steps {
-                sh 'mvn --projects card-tokenizer --also-make install'
+                sh 'mvn --projects card-tokenizer --also-make clean install'
             }
         }
     }
