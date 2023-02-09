@@ -97,6 +97,24 @@
                                     </arguments>
                                 </configuration>
                             </execution>
+
+                            <execution>
+                                <id>push-docker-image</id>
+                                <phase>deploy</phase>
+                                <goals>
+                                    <goal>exec</goal>
+                                </goals>
+                                <configuration>
+                                    <executable>docker</executable>
+                                    <workingDirectory>${project.basedir}</workingDirectory>
+                                    <arguments>
+                                        <argument>push</argument>
+                                        <argument>
+                                            nenadkocev/tokenizer:${project.version}
+                                        </argument>
+                                    </arguments>
+                                </configuration>
+                            </execution>
                         </executions>
                     </plugin>
                 </plugins>
