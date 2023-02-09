@@ -100,7 +100,7 @@
 
                             <execution>
                                 <id>push-docker-image</id>
-                                <phase>deploy</phase>
+                                <phase>install</phase>
                                 <goals>
                                     <goal>exec</goal>
                                 </goals>
