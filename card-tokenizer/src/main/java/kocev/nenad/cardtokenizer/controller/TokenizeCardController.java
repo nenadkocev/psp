@@ -19,6 +19,11 @@ public class TokenizeCardController {
 
     private final TokenService tokenService;
 
+    @GetMapping(path = "/ping")
+    public ResponseEntity<String> ping() {
+        return ResponseEntity.ok("pong");
+    }
+
     @PostMapping(path = "/tokenize", consumes = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<TokenizedCard> tokenizeCard(@RequestBody RequestForTokenCommand requestForTokenCommand) {
         return ResponseEntity.ok(tokenService.tokenizeCard(requestForTokenCommand));
